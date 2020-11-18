@@ -18,7 +18,9 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
 const customers = require('./routes/customers');
+const auth = require('./routes/auth')
 app.use('/api/customers', customers)
+app.use('/api/auth', auth)
 
 //port
 const port = process.env.PORT || 5000
