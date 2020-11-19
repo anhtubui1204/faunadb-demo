@@ -1,6 +1,7 @@
 const express = require('express')
 const router = express.Router()
 
+const { authMiddleware } = require('../middlewares/auth')
 const { getAllCustomers, getSingleCustomer, createCustomer, updateCustomer, deleteCustomer } = require('../controllers/customers');
 
 router.get('/', getAllCustomers)

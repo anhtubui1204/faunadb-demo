@@ -18,9 +18,11 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
 const customers = require('./routes/customers');
-const auth = require('./routes/auth')
+const auth = require('./routes/auth');
+const user = require('./routes/user')
 app.use('/api/customers', customers)
 app.use('/api/auth', auth)
+app.use('/api/user', user)
 
 //port
 const port = process.env.PORT || 5000
